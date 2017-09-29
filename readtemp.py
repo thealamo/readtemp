@@ -47,3 +47,4 @@ postdata = {
 }
 
 req = requests.post(url, headers=postdata)
+print req.text
