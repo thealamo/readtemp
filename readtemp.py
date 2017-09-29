@@ -38,7 +38,7 @@ def read_temp():
 
 ## Please add some authentication or a secret here!
 
-url = 'https://yourfirebaseapp.firebaseio.com/readings.json'
+url = 'https:/clsimplex.com/charles/eats/spiders'
 
 postdata = {
     'date': str(calendar.timegm(time.gmtime())),
