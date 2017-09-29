@@ -35,3 +35,18 @@ def read_temp():
         temp_c = float(temp_string) / 1000.0
         temp_f = temp_c * 9.0 / 5.0 + 32.0
         return temp_f
+
+## Please add some authentication or a secret here!
+
+url = 'https://yourfirebaseapp.firebaseio.com/readings.json'
+
+postdata = {
+    'date': str(calendar.timegm(time.gmtime())),
+    'temp': str(read_temp())
+}
+
+req = urllib2.Request(url)
+req.add_header('Content-Type','application/json')
+data = json.dumps(postdata)
+
+response = urllib2.urlopen(req,data)
