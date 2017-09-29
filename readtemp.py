@@ -42,7 +42,8 @@ url = 'https://clsimplex.com/charles/eats/spiders'
 
 postdata = {
     'date': str(calendar.timegm(time.gmtime())),
-    'temp': str(read_temp())
+    'temp': str(read_temp()),
+	'hello': 'hello good by'
 }
 
 req = requests.post(url, headers=postdata)
