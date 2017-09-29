@@ -3,7 +3,7 @@ import glob
 import subprocess
 import calendar
 import time
-import urllib2
+import requests
 import json
 
 #initialize
@@ -45,8 +45,4 @@ postdata = {
     'temp': str(read_temp())
 }
 
-req = urllib2.Request(url)
-req.add_header('Content-Type','application/json')
-data = json.dumps(postdata)
-
-response = urllib2.urlopen(req,data)
+req = requests.post(url, headers=postdata)
