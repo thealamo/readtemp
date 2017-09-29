@@ -38,7 +38,7 @@ def read_temp():
 
 ## Please add some authentication or a secret here!
 
-url = 'https:/clsimplex.com/charles/eats/spiders'
+url = 'https://clsimplex.com/charles/eats/spiders'
 
 postdata = {
     'date': str(calendar.timegm(time.gmtime())),
