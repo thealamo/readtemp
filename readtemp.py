@@ -46,5 +46,5 @@ postdata = {
 	'hello': 'hello good by'
 }
 
-req = requests.post(url, headers=postdata)
+req = requests.post(url, data=postdata)
 print req.text
